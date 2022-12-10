@@ -1,14 +1,9 @@
 import cv2
 
-# 이미지 파일 저장 위치
-imgfile = 'C:/Users/LG/image/para.jpg'
-# cascade 파일 저장 위치
-cascade_file = "C:/Users/LG/haarcascade_frontalface_default.xml"
-
 #이미지 파일 읽기
-image = cv2.imread(imgfile)
+image = cv2.imread('C:/Users/LG/image/para.jpg')
 #cascade 파일 읽기
-cascade = cv2.CascadeClassifier(cascade_file)
+cascade = cv2.CascadeClassifier("C:/Users/LG/haarcascade_frontalface_default.xml")
 
 face_list = cascade.detectMultiScale(image, scaleFactor=1.11, minNeighbors=4, minSize=(50, 50), maxSize = (55,55))
 
